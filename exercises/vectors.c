@@ -7,7 +7,7 @@ struct Vector{
 struct Vector* vector_new(int capacity){
     struct Vector *vector_ptr = (struct Vector *)malloc(sizeof(struct Vector));
     int true_capacity = 16;
-        
+
     while (capacity>true_capacity){
         true_capacity *= 2;
     }
@@ -19,4 +19,8 @@ struct Vector* vector_new(int capacity){
     vector_ptr -> data = data_ptr;
 
     return vector_ptr;
+}
+
+int vector_size(struct Vector* vector_ptr) {
+    return vector_ptr -> size; 
 }
