@@ -24,3 +24,7 @@ struct Vector* vector_new(int capacity){
 int vector_size(struct Vector* vector_ptr) {
     return vector_ptr -> size; 
 }
+
+int vector_capacity(struct Vector* vector_ptr) {
+    return vector_ptr -> capacity;
+}
