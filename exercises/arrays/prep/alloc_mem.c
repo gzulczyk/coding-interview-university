@@ -1,0 +1,22 @@
+struct Vector{
+    int *data;
+    int size;
+    int capacity;
+};
+
+struct Vector* vector_new(int capacity){
+    struct Vector *vector_ptr = (struct Vector *)malloc(sizeof(struct Vector));
+    int true_capacity = 16;
+        
+    while (capacity>true_capacity){
+        true_capacity *= 2;
+    }
+    
+    int *data_ptr = (int*)malloc(true_capacity * sizeof(int));
+
+    vector_ptr -> size = 0;
+    vector_ptr -> capacity = true_capacity;
+    vector_ptr -> data = data_ptr;
+
+    return vector_ptr;
+}
