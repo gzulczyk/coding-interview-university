@@ -92,3 +92,12 @@ void vector_delete(int index, struct Vector* vector_ptr){
 
     vector_ptr -> size = vector_ptr -> size-1;
 }
+
+void vector_remove(int item, struct Vector* vector_ptr){
+    for(int i = 0; i < (vector_ptr->size); i++) {
+       if(*(vector_ptr -> data + i) == item) {
+        vector_delete(i, vector_ptr);
+        i--;
+       }
+    }
+}
