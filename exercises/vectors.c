@@ -69,8 +69,12 @@ void vector_insert(int index, int new_data, struct Vector* vector_ptr){
     for(int i = vector_ptr -> size; i > index+1; i--) {
         *(vector_ptr -> data + i) = *(vector_ptr -> data + i - 1);
     }
-    
+
     *(vector_ptr -> data + index) = new_data;
 
     vector_ptr -> size = vector_ptr -> size+1;
+}
+
+void vector_prepend(int new_data, struct Vector* vector_ptr) {
+    vector_insert(0, new_data, vector_ptr);
 }

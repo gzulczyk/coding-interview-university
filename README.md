@@ -616,7 +616,7 @@ if you can identify the runtime complexity of different algorithms. It's a super
         - [X] at(index) - returns the item at a given index, blows up if index out of bounds
         - [X] push(item)
         - [X] insert(index, item) - inserts item at index, shifts that index's value and trailing elements to the right
-        - [ ] prepend(item) - can use insert above at index 0
+        - [X] prepend(item) - can use insert above at index 0
         - [ ] pop() - remove from end, return value
         - [ ] delete(index) - delete item at index, shifting all trailing elements left
         - [ ] remove(item) - looks for value and removes index holding it (even if in multiple places)
