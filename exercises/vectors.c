@@ -60,3 +60,17 @@ void vector_push(int new_data, struct Vector* vector_ptr) {
     vector_ptr -> size = vector_ptr -> size+1;
     *(vector_ptr -> data + vector_ptr -> size - 1) = new_data;
 }
+
+void vector_insert(int index, int new_data, struct Vector* vector_ptr){
+    if (vector_ptr -> capacity == vector_ptr -> size) {
+        vector_resize(vector_ptr, vector_ptr -> capacity);
+    }
+
+    for(int i = vector_ptr -> size; i > index+1; i--) {
+        *(vector_ptr -> data + i) = *(vector_ptr -> data + i - 1);
+    }
+    
+    *(vector_ptr -> data + index) = new_data;
+
+    vector_ptr -> size = vector_ptr -> size+1;
+}
