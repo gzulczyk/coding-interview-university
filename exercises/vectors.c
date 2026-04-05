@@ -78,3 +78,9 @@ void vector_insert(int index, int new_data, struct Vector* vector_ptr){
 void vector_prepend(int new_data, struct Vector* vector_ptr) {
     vector_insert(0, new_data, vector_ptr);
 }
+
+int vector_pop(struct Vector* vector_ptr) {
+    int removed_item = *(vector_ptr -> data + vector_ptr -> size-1);
+    vector_ptr -> size = vector_ptr -> size-1;
+    return removed_item;
+}
