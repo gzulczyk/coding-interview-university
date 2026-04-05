@@ -38,3 +38,11 @@ int vector_is_empty(struct Vector* vector_ptr) {
         return false;
     }
 }
+
+int vector_at(int index, struct Vector* vector_ptr) {
+    if(vector_ptr -> size - 1 < index || index < 0) {
+        exit(-1);
+    } else {
+        return *(vector_ptr -> data + index);
+    }
+}
