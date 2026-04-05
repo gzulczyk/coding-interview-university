@@ -46,3 +46,17 @@ int vector_at(int index, struct Vector* vector_ptr) {
         return *(vector_ptr -> data + index);
     }
 }
+
+void vector_resize(struct Vector* vector_ptr, int units_to_update) {
+    vector_ptr -> capacity = vector_ptr -> capacity + units_to_update;
+    vector_ptr -> data = (int*)realloc(vector_ptr->data, vector_ptr->capacity * sizeof(int));
+}
+
+void vector_push(int new_data, struct Vector* vector_ptr) {
+    if (vector_ptr -> capacity == vector_ptr -> size) {
+        vector_resize(vector_ptr, vector_ptr -> capacity);
+    }
+
+    vector_ptr -> size = vector_ptr -> size+1;
+    *(vector_ptr -> data + vector_ptr -> size - 1) = new_data;
+}
