@@ -82,6 +82,9 @@ void vector_prepend(int new_data, struct Vector* vector_ptr) {
 int vector_pop(struct Vector* vector_ptr) {
     int removed_item = *(vector_ptr -> data + vector_ptr -> size-1);
     vector_ptr -> size = vector_ptr -> size-1;
+    if(vector_ptr -> size == vector_ptr -> capacity / 4) {
+        vector_resize(vector_ptr, -(vector_ptr -> capacity / 2));
+    }
     return removed_item;
 }
 
