@@ -84,3 +84,11 @@ int vector_pop(struct Vector* vector_ptr) {
     vector_ptr -> size = vector_ptr -> size-1;
     return removed_item;
 }
+
+void vector_delete(int index, struct Vector* vector_ptr){
+    for(int i = index; i < (vector_ptr->size); i++) {
+        *(vector_ptr -> data + i) = *(vector_ptr -> data + i + 1);
+    }
+
+    vector_ptr -> size = vector_ptr -> size-1;
+}
