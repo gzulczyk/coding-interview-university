@@ -101,3 +101,12 @@ void vector_remove(int item, struct Vector* vector_ptr){
        }
     }
 }
+
+int vector_find(int item, struct Vector* vector_ptr){
+    for(int i = 0; i < (vector_ptr->size); i++) {
+       if(*(vector_ptr -> data + i) == item) {
+        return i;
+       }
+    }
+    return -1;
+}
