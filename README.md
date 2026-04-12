@@ -642,7 +642,7 @@ if you can identify the runtime complexity of different algorithms. It's a super
             - not the whole video, just portions about Node struct and memory allocation
     - [X] Linked List vs Arrays:
         - [Linked Lists Vs Arrays (video)](https://www.youtube.com/watch?v=xFMXIgvlgcY)
-    - [ ] [Why you should avoid linked lists (video)](https://www.youtube.com/watch?v=YQs6IC-vgmo)
+    - [X] [Why you should avoid linked lists (video)](https://www.youtube.com/watch?v=cvZArAipOjo)
     - [ ] Gotcha: you need pointer to pointer knowledge:
         (for when you pass a pointer to a function that may change the address where that pointer points)
         This page is just to get a grasp on ptr to ptr. I don't recommend this list traversal style. Readability and maintainability suffer due to cleverness.
