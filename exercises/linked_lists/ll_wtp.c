@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <stdbool.h>
 
 struct node {
     int data;
@@ -18,4 +19,13 @@ int size(struct ll *linked_list) {
         current=current->next;
     }
     return counter;
+}
+
+
+bool empty(struct ll *ll) {
+    if (ll->head == NULL) {
+        return true;
+    } else {
+        return false;
+    }
 }

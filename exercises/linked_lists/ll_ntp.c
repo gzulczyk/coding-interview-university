@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <stdbool.h>
 
 struct node{
     int data;
@@ -14,4 +15,8 @@ int size(struct node *ll) {
     }
     
     return counter;
+}
+
+bool empty(struct node *ll) {
+    return ll == NULL;
 }
