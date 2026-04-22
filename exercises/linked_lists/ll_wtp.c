@@ -21,11 +21,21 @@ int size(struct ll *linked_list) {
     return counter;
 }
 
-
 bool empty(struct ll *ll) {
-    if (ll->head == NULL) {
-        return true;
-    } else {
-        return false;
+    return ll->head == NULL;
+}
+
+int value_at(struct ll* linked_list, int index) {
+    struct node *current = linked_list->head;
+    int i = 0;
+    
+    while (i != index) {
+        i++;
+        current = current->next;
+        
+        if (current == NULL) {
+        return -1;
+        }
     }
+        return current->data;
 }
