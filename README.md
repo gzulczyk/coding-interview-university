@@ -84,7 +84,7 @@ if you can identify the runtime complexity of different algorithms. It's a super
         - [X] size() - returns the number of data elements in the list
         - [X] empty() - bool returns true if empty
         - [X] value_at(index) - returns the value of the nth item (starting at 0 for first)
-        - [ ] push_front(value) - adds an item to the front of the list
+        - [X] push_front(value) - adds an item to the front of the list
         - [ ] pop_front() - remove the front item and return its value
         - [ ] push_back(value) - adds an item at the end
         - [ ] pop_back() - removes end item and returns its value

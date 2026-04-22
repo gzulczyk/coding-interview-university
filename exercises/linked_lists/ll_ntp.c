@@ -35,3 +35,11 @@ int value_at(struct node *ll, int index) {
     }
         return current->data;
 }
+
+
+void push_front(int value, struct node **ll) {
+    struct node *newNode = malloc(sizeof(struct node));
+    newNode->data = value;
+    newNode->next = *ll;
+    *ll = newNode;
+}

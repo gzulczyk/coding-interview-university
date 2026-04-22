@@ -39,3 +39,14 @@ int value_at(struct ll* linked_list, int index) {
     }
         return current->data;
 }
+
+void push_front(int value, struct ll *linked_list) {
+    struct node *newNode = malloc(sizeof(struct node));
+    newNode->data = value;
+    newNode->next = linked_list->head;
+    linked_list->head = newNode;
+    if (linked_list->tail == NULL) {
+        linked_list->tail = newNode;
+    }
+
+}
