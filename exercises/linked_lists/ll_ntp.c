@@ -76,3 +76,28 @@ void push_back(struct node **ll, int value) {
 
     current->next = newNode;
 }
+
+void pop_back(struct node **ll) {
+    if (*ll == NULL) {
+        exit(-1);
+    }
+    struct node *new_tail = NULL;
+    struct node *old_tail = NULL;
+    struct node *current = *ll;
+    
+    while(current->next != NULL){
+        new_tail = current;
+        current = current->next;
+    }
+    
+    old_tail = current;
+
+    if (new_tail == NULL) {
+        *ll = NULL;
+        // Only one node!
+    } else {
+        new_tail->next = NULL;
+    }
+    
+    free(old_tail);
+}
