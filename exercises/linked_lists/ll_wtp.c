@@ -68,3 +68,19 @@ void pop_front(struct ll *ll) {
 
     free(old_head);
 }
+
+void push_back(struct ll *ll, int value) {
+    
+    struct node *newNode = malloc(sizeof(struct node));
+    newNode->next = NULL;
+    newNode->data = value;
+
+    if (ll->head == NULL) {
+        ll->head = newNode;
+        ll->tail = newNode;
+    } else 
+    {
+        ll->tail->next = newNode;
+        ll->tail = newNode;
+    }
+}

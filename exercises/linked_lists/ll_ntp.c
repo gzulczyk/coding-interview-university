@@ -7,7 +7,7 @@ struct node{
 };
 
 int size(struct node *ll) {
-    struct node* current = ll;
+    struct node *current = ll;
     int counter = 0;
     while (current != NULL) {
         counter++;
@@ -55,4 +55,24 @@ void pop_front(struct node **ll) {
     *ll = (*ll)->next;
 
     free(old_head);
+}
+
+void push_back(struct node **ll, int value) {
+    
+    struct node *newNode = malloc(sizeof(struct node));
+    newNode->data = value;
+    newNode->next = NULL;
+    
+    struct node *current = *ll;
+    
+    if (current == NULL) {
+        *ll = newNode;
+        return;
+    }
+    
+    while (current->next != NULL) {
+        current=current->next;
+    }
+
+    current->next = newNode;
 }
