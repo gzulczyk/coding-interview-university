@@ -204,3 +204,23 @@ void reverse(struct node **ll) {
 
     *ll = prev;
 }
+
+
+void remove_value(int value, struct node **ll) {
+    struct node *current = *ll;
+    struct node *prev = NULL;
+    
+    while (current != NULL) {
+        if(current->data == value) {
+            if (prev == NULL){
+            *ll = current->next;
+        } else {
+            prev->next = current->next;
+        }
+        free(current);
+        return;
+    }
+        prev = current;
+        current = current->next;  
+    }
+}

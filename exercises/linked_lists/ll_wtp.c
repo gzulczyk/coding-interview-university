@@ -219,3 +219,33 @@ void reverse(struct ll *ll) {
     ll->head = prev;
     ll->tail = tempHead;
 }
+
+void remove_value(int value, struct ll *ll) {
+    struct node *current = ll->head;
+    struct node *prev = NULL;
+    int index = 0;
+    
+    while (current != NULL) {
+        if(current->data == value) {
+            if (index == 0){
+            ll->head = current->next;
+
+            if (ll->head == NULL) { 
+                ll->tail = NULL; 
+            }
+        } else {
+            prev->next = current->next;
+        }
+        
+        if (current == ll->tail) {
+            ll->tail = prev;
+        }
+
+        free(current);
+        return;
+    }
+        prev = current;
+        current = current->next;  
+        index++;
+    }
+}
