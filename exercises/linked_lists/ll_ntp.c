@@ -171,3 +171,21 @@ void erase(int index, struct node **ll){
 
     free(current);
 }
+
+int value_n_from_end(int index, struct node *ll) {
+    struct node *current = ll;
+    int i=0;
+    
+    while (current != NULL){
+        current = current->next;
+        i++;
+    }
+
+    int inversed_index = i - index;
+    current = ll;
+    for (int y=0; y<inversed_index; y++) {
+        current = current->next;
+    }
+    return current->data;
+
+}
