@@ -154,3 +154,35 @@ void insert (int value, int index, struct ll *ll) {
     }
 
 }
+
+void erase(int index, struct ll *ll) {
+    struct node *current = ll->head;
+    struct node *prev = NULL;
+
+    for (int i=0; i<index; i++) {
+        if (current != NULL) {
+        prev = current;
+        current = current->next;
+        } else {
+            exit(-1);
+        }
+    }
+
+    if (index == 0){
+        ll->head = current->next;
+        if (ll->head == NULL) 
+        { 
+            ll->tail = NULL; 
+        }
+    } else {
+        prev->next = current->next;
+    }
+    
+    if (current == ll->tail) {
+        ll->tail = prev;
+    }
+
+    free(current);
+}
+
+

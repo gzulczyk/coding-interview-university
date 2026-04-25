@@ -91,7 +91,7 @@ if you can identify the runtime complexity of different algorithms. It's a super
         - [X] front() - get the value of the front item
         - [X] back() - get the value of the end item
         - [X] insert(index, value) - insert value at index, so the current item at that index is pointed to by the new item at the index
-        - [ ] erase(index) - removes node at given index
+        - [X] erase(index) - removes node at given index
         - [ ] value_n_from_end(n) - returns the value of the node at the nth position from the end of the list
         - [ ] reverse() - reverses the list
         - [ ] remove_value(value) - removes the first item in the list with this value

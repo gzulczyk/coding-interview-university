@@ -149,3 +149,25 @@ void insert(int index, int value, struct node **ll) {
         prev->next = newNode;
     }
 }
+
+void erase(int index, struct node **ll){
+    struct node *current = *ll;
+    struct node *prev = NULL;
+
+    for (int i=0; i<index; i++) {
+        if (current != NULL) {
+            prev = current;
+            current = current->next;
+        } else {
+            exit(-1);
+        }
+    }
+
+    if (index == 0) {
+        *ll = current->next;
+    } else {
+        prev->next = current -> next;
+    }
+
+    free(current);
+}
