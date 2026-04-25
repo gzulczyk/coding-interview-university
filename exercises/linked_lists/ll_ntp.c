@@ -189,3 +189,18 @@ int value_n_from_end(int index, struct node *ll) {
     return current->data;
 
 }
+
+void reverse(struct node **ll) {    
+    struct node *current = *ll;
+    struct node *prev = NULL;
+    struct node *next = NULL;
+
+    while (current != NULL) {
+        next = current->next;
+        current->next = prev;
+        prev = current;
+        current=next;
+    }
+
+    *ll = prev;
+}
