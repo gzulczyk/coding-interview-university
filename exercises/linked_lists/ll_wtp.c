@@ -50,3 +50,21 @@ void push_front(int value, struct ll *linked_list) {
     }
 
 }
+
+
+void pop_front(struct ll *ll) {
+    if (ll->head == NULL) {
+        exit(-1); // The list is empty itself, so you cannot pop the front value. 
+    }
+    
+    struct node *old_head = ll->head; 
+
+    if(ll->tail == ll->head) {
+       ll->head = NULL;
+       ll->tail = NULL;
+    } else {
+        ll->head = ll->head->next;
+    }
+
+    free(old_head);
+}

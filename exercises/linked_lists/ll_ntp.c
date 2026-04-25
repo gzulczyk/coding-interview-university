@@ -43,3 +43,16 @@ void push_front(int value, struct node **ll) {
     newNode->next = *ll;
     *ll = newNode;
 }
+
+void pop_front(struct node **ll) {
+    
+    if (*ll == NULL) {
+        exit(-1); // The list is empty itself, so you cannot pop the front value. 
+    }
+
+    struct node *old_head = *ll; 
+    
+    *ll = (*ll)->next;
+
+    free(old_head);
+}
