@@ -125,3 +125,32 @@ int back(struct ll *ll) {
     }
     return ll->tail->data;
 }
+
+void insert (int value, int index, struct ll *ll) {
+    struct node *newNode = malloc(sizeof(struct node));
+    newNode->data = value;
+
+    struct node *current = ll->head;
+    struct node *prev = NULL;
+
+    for (int i=0; i<index; i++) {
+        if (current != NULL) {
+        prev = current;
+        current = current->next;
+        } else {
+            exit(-1);
+        }
+    }
+    if (index == 0) {
+        newNode->next = ll->head;
+        ll->head = newNode;
+    } else if (current == ll->tail) {
+        ll->tail->next = newNode;
+        newNode->next = NULL;
+        ll->tail = newNode;
+    } else {
+        newNode->next = current;
+        prev->next = newNode;        
+    }
+
+}
