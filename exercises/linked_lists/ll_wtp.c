@@ -110,3 +110,18 @@ void pop_back(struct ll *ll) {
     free(old_tail);
 
 }
+
+int front(struct ll *ll) {
+    if (ll->head == NULL) {
+       return -1;
+    }
+
+    return ll->head->data;
+}
+
+int back(struct ll *ll) {
+    if(ll->tail == NULL) {
+        return -1;
+    }
+    return ll->tail->data;
+}

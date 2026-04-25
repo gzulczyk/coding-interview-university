@@ -101,3 +101,26 @@ void pop_back(struct node **ll) {
     
     free(old_tail);
 }
+
+int front(struct node *ll) {
+    if (ll == NULL) {
+       return -1;
+    }
+
+    return ll->data;
+}
+
+int back(struct node *ll) {
+    if (ll == NULL) {
+        return -1;
+    }
+
+    struct node *current = ll;
+
+    while (current->next != NULL) {
+        current = current->next;
+    }
+
+    return current->data;
+
+}
