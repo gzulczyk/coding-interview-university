@@ -38,3 +38,13 @@ int pop(struct stack *array) {
 
     return popped;
 }
+
+int peek(struct stack *array){
+    if(array->size == 0) {
+        return -1;
+    }
+
+    int peeked = array->stack_array[array->size-1];
+
+    return peeked;
+}
