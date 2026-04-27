@@ -66,3 +66,15 @@ int search(struct stack *array, int value){
     }
     return -1;
 }
+
+bool contains(struct stack *array, int value){
+    for (int i = 0; i<array->size; i++) {
+         if (array->stack_array[i] == value) {
+            return true;
+         }
+        }
+        return false;
+        // I know, I can reuse search()
+        // return search(array, value) != -1;
+    }
+
