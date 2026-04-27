@@ -107,7 +107,7 @@ if you can identify the runtime complexity of different algorithms. It's a super
         - [X] push(item) — adds item to top of stack
         - [X] pop() — removes and returns the top item; blow up if empty
         - [X] peek() — returns the top item without removing it; blow up if empty
-        - [ ] is_empty() — returns true if stack has no items
+        - [X] is_empty() — returns true if stack has no items
         - [ ] size() — returns number of items in the stack
         - [ ] search(item) — returns the 1-based position from the top of the item, -1 if not found
         - [ ] contains(item) — returns true if the item exists in the stack

@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdbool.h>
 
 struct stack {
     int *stack_array;
@@ -47,4 +48,8 @@ int peek(struct stack *array){
     int peeked = array->stack_array[array->size-1];
 
     return peeked;
+}
+
+bool is_empty(struct stack *array) {
+    return array->size == 0;
 }
