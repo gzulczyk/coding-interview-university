@@ -53,3 +53,7 @@ int peek(struct stack *array){
 bool is_empty(struct stack *array) {
     return array->size == 0;
 }
+
+int size(struct stack *array) {
+    return array->size;
+}
