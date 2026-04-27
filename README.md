@@ -111,7 +111,7 @@ if you can identify the runtime complexity of different algorithms. It's a super
         - [X] size() — returns number of items in the stack
         - [X] search(item) — returns the 1-based position from the top of the item, -1 if not found
         - [X] contains(item) — returns true if the item exists in the stack
-        - [ ] clear() — removes all items from the stack
+        - [X] clear() — removes all items from the stack
 
 - ### Queue
     - [ ] [Queue (video)](https://www.coursera.org/lecture/data-structures/queues-EShpq)

@@ -78,3 +78,6 @@ bool contains(struct stack *array, int value){
         // return search(array, value) != -1;
     }
 
+void clear(struct stack *array) {
+    array->size = 0;
+}
