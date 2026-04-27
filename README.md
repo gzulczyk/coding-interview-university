@@ -80,7 +80,7 @@ if you can identify the runtime complexity of different algorithms. It's a super
         (for when you pass a pointer to a function that may change the address where that pointer points)
         This page is just to get a grasp on ptr to ptr. I don't recommend this list traversal style. Readability and maintainability suffer due to cleverness.
         - [Pointers to Pointers](https://www.eskimo.com/~scs/cclass/int/sx8.html)
-    - [ ] Implement (I did with tail pointer & without):
+    - [X] Implement (I did with tail pointer & without):
         - [X] size() - returns the number of data elements in the list
         - [X] empty() - bool returns true if empty
         - [X] value_at(index) - returns the value of the nth item (starting at 0 for first)
@@ -95,14 +95,22 @@ if you can identify the runtime complexity of different algorithms. It's a super
         - [X] value_n_from_end(n) - returns the value of the node at the nth position from the end of the list
         - [X] reverse() - reverses the list
         - [X] remove_value(value) - removes the first item in the list with this value
-    - [ ] Doubly-linked List
+    - [X] Doubly-linked List
         - [Description (video)](https://www.coursera.org/lecture/data-structures/doubly-linked-lists-jpGKD)
         - No need to implement
 
 - ### Stack
     - [ ] [Stacks (video)](https://www.coursera.org/lecture/data-structures/stacks-UdKzQ)
     - [ ] [[Review] Stacks in 3 minutes (video)](https://youtu.be/KcT3aVgrrpU)
-    - [ ] Will not implement. Implementing with the array is trivial
+    - [ ] Implement
+        - [ ] push(item) — adds item to top of stack
+        - [ ] pop() — removes and returns the top item; blow up if empty
+        - [ ] peek() — returns the top item without removing it; blow up if empty
+        - [ ] is_empty() — returns true if stack has no items
+        - [ ] size() — returns number of items in the stack
+        - [ ] search(item) — returns the 1-based position from the top of the item, -1 if not found
+        - [ ] contains(item) — returns true if the item exists in the stack
+        - [ ] clear() — removes all items from the stack
 
 - ### Queue
     - [ ] [Queue (video)](https://www.coursera.org/lecture/data-structures/queues-EShpq)
