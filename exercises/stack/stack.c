@@ -57,3 +57,12 @@ bool is_empty(struct stack *array) {
 int size(struct stack *array) {
     return array->size;
 }
+
+int search(struct stack *array, int value){
+    for (int i = 0; i<array->size; i++) {
+        if (array->stack_array[i] == value) {
+            return i;
+        }
+    }
+    return -1;
+}
