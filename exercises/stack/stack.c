@@ -27,3 +27,14 @@ void push(int value, struct stack *array) {
     }
     exit(-1);
 }
+
+int pop(struct stack *array) {
+    if(array->size == 0) {
+        return -1;
+    }
+
+    int popped = array->stack_array[array->size-1];
+    array->size--;
+
+    return popped;
+}
