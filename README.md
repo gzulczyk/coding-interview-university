@@ -103,7 +103,8 @@ if you can identify the runtime complexity of different algorithms. It's a super
     - [ ] [Stacks (video)](https://www.coursera.org/lecture/data-structures/stacks-UdKzQ)
     - [ ] [[Review] Stacks in 3 minutes (video)](https://youtu.be/KcT3aVgrrpU)
     - [ ] Implement
-        - [ ] push(item) — adds item to top of stack
+        - [X] create_stack() — creates and returns a new empty stack
+        - [X] push(item) — adds item to top of stack
         - [ ] pop() — removes and returns the top item; blow up if empty
         - [ ] peek() — returns the top item without removing it; blow up if empty
         - [ ] is_empty() — returns true if stack has no items
