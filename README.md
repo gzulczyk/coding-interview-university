@@ -122,7 +122,7 @@ if you can identify the runtime complexity of different algorithms. It's a super
         - dequeue() - returns value and removes least recently added element (front)
         - empty()
     - [ ] Implement using a fixed-sized array:
-        - enqueue(value) - adds item at end of available storage
+        - [X] enqueue(value) - adds item at end of available storage
         - dequeue() - returns value and removes least recently added element
         - empty()
         - full()
