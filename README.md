@@ -117,11 +117,11 @@ if you can identify the runtime complexity of different algorithms. It's a super
     - [ ] [Queue (video)](https://www.coursera.org/lecture/data-structures/queues-EShpq)
     - [ ] [Circular buffer/FIFO](https://en.wikipedia.org/wiki/Circular_buffer)
     - [ ] [[Review] Queues in 3 minutes (video)](https://youtu.be/D6gu-_tmEpQ)
-    - [ ] Implement using linked-list, with tail pointer:
-        - enqueue(value) - adds value at a position at the tail
-        - dequeue() - returns value and removes least recently added element (front)
-        - empty()
-    - [ ] Implement using a fixed-sized array/linked list:
+    - [X] Implement using linked-list, with tail pointer:
+        [X] enqueue(value) - adds value at a position at the tail
+        [X] dequeue() - returns value and removes least recently added element (front)
+        [X] empty()
+    - [X] Implement using a fixed-sized array/linked list:
         - [X] enqueue(value) - adds item at end of available storage
         - [X] dequeue() - returns value and removes least recently added element
         - [X] empty() - returns true if no elements are stored
