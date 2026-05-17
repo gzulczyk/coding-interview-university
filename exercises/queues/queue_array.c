@@ -1,4 +1,6 @@
 #include <stdlib.h>
+#include <stdbool.h>
+
 #define CAPACITY 5
 
 int array[CAPACITY];
@@ -27,4 +29,12 @@ int dequeue() {
     count--;
 
     return value;
+}
+
+bool empty() {
+    if (count == 0) {
+        return true;
+    } else {
+        return false;
+    }
 }

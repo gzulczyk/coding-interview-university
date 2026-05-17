@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <stdbool.h>
 
 struct node {
     int data;
@@ -40,4 +41,12 @@ int dequeue(struct tail_node *ll) {
     }
     free(old_head);
     return value;
+}
+
+bool empty(struct tail_node *ll){
+    if (ll->head == NULL) {
+        return true;
+    } else {
+        return false;
+    }
 }
