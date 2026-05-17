@@ -23,3 +23,21 @@ void enqueue(struct tail_node *ll, int value) {
         ll->tail = newNode;
     }
 }
+
+int dequeue(struct tail_node *ll) {
+    if(ll->head == NULL) {
+        exit(-1);
+    }
+
+    struct node *old_head = ll->head;
+    int value = old_head->data;
+
+    if (ll->head == ll->tail) {
+        ll->head = NULL;
+        ll->tail = NULL;
+    } else {
+        ll->head = ll->head->next;
+    }
+    free(old_head);
+    return value;
+}

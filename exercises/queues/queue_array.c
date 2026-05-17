@@ -17,3 +17,14 @@ int enqueue(int value) {
     }
 }
 
+int dequeue() {
+    if (count == 0) {
+        return -1;
+    }
+    
+    int value = array[front];
+    front = (front + 1) % CAPACITY;
+    count--;
+
+    return value;
+}
