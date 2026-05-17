@@ -50,3 +50,6 @@ bool empty(struct tail_node *ll){
         return false;
     }
 }
+
+// bool full()
+// You cannot implement the full function here because we don't have fixed size of that linked list. 

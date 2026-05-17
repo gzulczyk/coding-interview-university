@@ -38,3 +38,11 @@ bool empty() {
         return false;
     }
 }
+
+bool full() { 
+    if (CAPACITY == count) {
+        return true;
+    } else {
+        return false;
+    }
+}

@@ -125,7 +125,7 @@ if you can identify the runtime complexity of different algorithms. It's a super
         - [X] enqueue(value) - adds item at end of available storage
         - [X] dequeue() - returns value and removes least recently added element
         - [X] empty() - returns true if no elements are stored
-        - full() - returns true if storage is at capacity (fixed-size only)
+        - [X] full() - returns true if storage is at capacity (fixed-size only)
     - [ ] Cost:
         - a bad implementation using a linked list where you enqueue at the head and dequeue at the tail would be O(n)
             because you'd need the next to last element, causing a full traversal of each dequeue
