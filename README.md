@@ -152,7 +152,7 @@ if you can identify the runtime complexity of different algorithms. It's a super
             - [Instant Uploads And Storage Optimization In Dropbox (video)](https://www.coursera.org/lecture/data-structures/instant-uploads-and-storage-optimization-in-dropbox-DvaIb)
             - [Distributed Hash Tables (video)](https://www.coursera.org/lecture/data-structures/distributed-hash-tables-tvH8H)
 
-    - [ ] Implement with array using linear probing
+    - [X] Implement with array using linear probing
         - [X] hash(k, m) - m is the size of the hash table
         - [X] add(key, value) - if the key already exists, update value
         - [X] exists(key)

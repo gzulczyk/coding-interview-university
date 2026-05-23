@@ -116,3 +116,21 @@ void remove(hash_table* table, const char* key) {
         free(kv);
     }
 }
+
+void destroy_table(hash_table* table) {
+    for (int i=0; i < table->size; i++) {
+        key_value* current = table->data[i];
+        key_value* next = NULL;
+        
+        while(current) {
+            next = current->next;
+            free(current->key);
+            free(current->value);
+            free(current);
+            current = next;
+        }   
+    }
+    
+    free(table->data);
+    free(table);
+}
