@@ -157,7 +157,7 @@ if you can identify the runtime complexity of different algorithms. It's a super
         - [X] add(key, value) - if the key already exists, update value
         - [X] exists(key)
         - [X] get(key)
-        - remove(key)
+        - [X] remove(key)
 
 **[⬆ back to top](#table-of-contents)**
 

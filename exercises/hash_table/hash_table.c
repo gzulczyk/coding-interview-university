@@ -84,3 +84,35 @@ void add(hash_table* table, const char *key, const char* value){
 bool exists(hash_table* table, const char* key) {
     return get(table,key) != NULL;
 }
+
+void remove(hash_table* table, const char* key) {
+    key_value* kv = get(table, key);
+    
+    if (kv == NULL) {
+        exit(-1); // It's impossible to remove a thing that doesn't exist! 
+    }
+
+    if (kv != NULL) {
+        int index = hash(key, table->size);
+        
+        key_value* prev = NULL;
+        key_value* current = NULL;
+        key_value* head = table->data[index];
+
+        while(head) {
+            if (strcmp(head->key, key) == 0) {
+            current = head;
+            break;
+        }
+            prev = head;
+            head = head->next;
+        }
+        
+        if (prev != NULL) prev->next = current->next;
+        if (prev == NULL) table->data[index] = current->next;
+
+        free(kv->value);
+        free(kv->key);
+        free(kv);
+    }
+}
