@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <stdbool.h>
 
 typedef struct key_value {
     char* key;
@@ -80,3 +81,6 @@ void add(hash_table* table, const char *key, const char* value){
     }
 }
 
+bool exists(hash_table* table, const char* key) {
+    return get(table,key) != NULL;
+}
