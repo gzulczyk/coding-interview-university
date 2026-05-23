@@ -56,3 +56,27 @@ key_value* get(hash_table* table, const char* key) {
 
     return NULL;
 }
+
+void add(hash_table* table, const char *key, const char* value){
+    key_value* kv = get(table, key);
+
+    if (kv != NULL) {
+        free(kv->value);
+        kv->value = strdup(value);
+    }
+
+    if (kv == NULL) {
+        int index = hash(key, table->size);
+        key_value* new_kv = malloc(sizeof(key_value));
+        
+        if(new_kv != NULL) {
+        new_kv->value = strdup(value);
+        new_kv->key = strdup(key);
+        new_kv->next = table->data[index];
+        table->data[index] = new_kv;
+        } else {
+            exit(-1);
+        }
+    }
+}
+

@@ -154,7 +154,7 @@ if you can identify the runtime complexity of different algorithms. It's a super
 
     - [ ] Implement with array using linear probing
         - [X] hash(k, m) - m is the size of the hash table
-        - add(key, value) - if the key already exists, update value
+        - [X] add(key, value) - if the key already exists, update value
         - exists(key)
         - [X] get(key)
         - remove(key)
