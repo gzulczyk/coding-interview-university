@@ -156,7 +156,7 @@ if you can identify the runtime complexity of different algorithms. It's a super
         - [X] hash(k, m) - m is the size of the hash table
         - add(key, value) - if the key already exists, update value
         - exists(key)
-        - get(key)
+        - [X] get(key)
         - remove(key)
 
 **[⬆ back to top](#table-of-contents)**

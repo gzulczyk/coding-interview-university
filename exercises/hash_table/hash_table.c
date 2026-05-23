@@ -44,3 +44,15 @@ hash_table* create_table(int size) {
     return new_hash_table;
 
 }
+
+key_value* get(hash_table* table, const char* key) {
+    int index = hash(key, table->size);
+    key_value* kv = table->data[index];
+
+    while(kv) {
+        if(strcmp(kv->key, key) == 0) return kv;
+        kv = kv->next;
+    }
+
+    return NULL;
+}
