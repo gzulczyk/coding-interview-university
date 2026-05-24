@@ -1,5 +1,7 @@
 #include <stdlib.h>
 #include <stdbool.h>
+#include <stdio.h>
+#include <string.h>
 
 typedef struct key_value {
     char* key;
@@ -85,7 +87,7 @@ bool exists(hash_table* table, const char* key) {
     return get(table,key) != NULL;
 }
 
-void remove(hash_table* table, const char* key) {
+void remove_entry(hash_table* table, const char* key) {
     key_value* kv = get(table, key);
     
     if (kv == NULL) {
@@ -130,7 +132,24 @@ void destroy_table(hash_table* table) {
             current = next;
         }   
     }
-    
+
     free(table->data);
     free(table);
+}
+
+int main() {
+    hash_table* table = create_table(5);
+    
+    add(table, "A", "Test");
+    add(table, "Z", "Test2");
+
+    printf("%d\n", exists(table, "A"));
+    printf("%d\n", exists(table, "K"));
+
+    printf("%s\n", get(table, "A")->value);
+    
+    add(table, "A", "Test2");
+    remove_entry(table, "A");
+    
+    destroy_table(table);
 }
