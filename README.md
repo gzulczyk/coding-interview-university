@@ -171,7 +171,7 @@ if you can identify the runtime complexity of different algorithms. It's a super
     - [ ] [[Review] Binary search in 4 minutes (video)](https://youtu.be/fDKIpRe8GW4)
     - [ ] Implement:
         - [X] binary search (on a sorted array of integers)
-        - binary search using recursion
+        - [X] binary search using recursion
 
 - ### Bitwise operations
     - [ ] [Bits cheat sheet](https://github.com/jwasham/coding-interview-university/blob/main/extras/cheat%20sheets/bits-cheat-sheet.pdf)
