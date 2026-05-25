@@ -7,3 +7,11 @@ bool is_even(int n){
 bool is_bit_set(int n, int k){
     return ((n >> k) & 1) == 1;
 }
+
+int left_shift(int n, int k){
+    return (n << k);
+}
+
+unsigned int right_shift(unsigned int n, int k){
+    return (n >> k);
+}

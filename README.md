@@ -203,8 +203,8 @@ if you can identify the runtime complexity of different algorithms. It's a super
     - [ ] Implement:
         - [X] check_even(n) - returns true if n is even; the simplest AND operation; use `n & 1 == 0`
         - [X] is_bit_set(n, k) - returns true if the kth bit is 1; foundation for reading any bit; use `(n >> k) & 1`
-        - [ ] left_shift(n, k) - shifts bits of n left by k positions, equivalent to multiplying by 2ᵏ; use `n << k`
-        - [ ] right_shift(n, k) - shifts bits of n right by k positions, equivalent to dividing by 2ᵏ; use `n >> k`
+        - [X] left_shift(n, k) - shifts bits of n left by k positions, equivalent to multiplying by 2ᵏ; use `n << k`
+        - [X] right_shift(n, k) - shifts bits of n right by k positions, equivalent to dividing by 2ᵏ; use `n >> k`
         - [ ] set_bit(n, k) - forces the kth bit to 1 regardless of its current value; use `n | (1 << k)`
         - [ ] clear_bit(n, k) - forces the kth bit to 0 regardless of its current value; use `n & ~(1 << k)`
         - [ ] flip_bit(n, k) - toggles the kth bit; if it was 1 it becomes 0 and vice versa; use `n ^ (1 << k)`
