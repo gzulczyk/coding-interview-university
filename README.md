@@ -200,6 +200,21 @@ if you can identify the runtime complexity of different algorithms. It's a super
         - [Swap](https://bits.stephan-brumme.com/swap.html)
     - [ ] Absolute value:
         - [Absolute Integer](https://bits.stephan-brumme.com/absInteger.html)
+    - [ ] Implement:
+        - [X] check_even(n) - returns true if n is even; the simplest AND operation; use `n & 1 == 0`
+        - [ ] is_bit_set(n, k) - returns true if the kth bit is 1; foundation for reading any bit; use `(n >> k) & 1`
+        - [ ] left_shift(n, k) - shifts bits of n left by k positions, equivalent to multiplying by 2ᵏ; use `n << k`
+        - [ ] right_shift(n, k) - shifts bits of n right by k positions, equivalent to dividing by 2ᵏ; use `n >> k`
+        - [ ] set_bit(n, k) - forces the kth bit to 1 regardless of its current value; use `n | (1 << k)`
+        - [ ] clear_bit(n, k) - forces the kth bit to 0 regardless of its current value; use `n & ~(1 << k)`
+        - [ ] flip_bit(n, k) - toggles the kth bit; if it was 1 it becomes 0 and vice versa; use `n ^ (1 << k)`
+        - [ ] modify_bit(n, k, v) - generalizes set/clear by setting the kth bit to a specific value v (0 or 1); use `(n & ~(1 << k)) | (v << k)`
+        - [ ] is_power_of_two(n) - builds on knowledge of bit patterns to check if exactly one bit is set; use `n & (n - 1) == 0`
+        - [ ] count_set_bits(n) - counts how many bits are 1 in a number; use Kernighan's method `while n: count++; n &= n - 1`
+        - [ ] swap(a, b) - swaps two values without a temp variable; use `a ^= b; b ^= a; a ^= b`
+        - [ ] abs_value(n) - computes absolute value without branching using the sign bit; use `mask = n >> 31; (n + mask) ^ mask`
+        - [ ] count_different_bits(a, b) - most complex; XOR marks differences then counts resulting 1-bits; use `popcount(a ^ b)`
+  
 
 **[⬆ back to top](#table-of-contents)**
 
