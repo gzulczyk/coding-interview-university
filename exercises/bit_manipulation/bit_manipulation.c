@@ -70,3 +70,10 @@ int abs_value(int n){
    int mask = n >> 31;
    return (n + mask) ^ mask;
 }
+
+int count_different_bits(int a, int b){
+    int counter; 
+    int diffs = a ^ b;
+    counter = count_set_bits(diffs);
+    return counter;
+}
