@@ -40,3 +40,11 @@ int modify_bit(int n, int k, int v){
         return -1;
     }
 }
+
+bool is_power_of_two(int n){
+    if (n == 0) {
+        return false;
+    }
+
+    return (n & (n-1)) == 0; 
+}
