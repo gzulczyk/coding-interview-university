@@ -65,3 +65,8 @@ void swap(int* a, int* b){
     *b = *b ^ *a;
     *a = *a ^ *b;
 }
+
+int abs_value(int n){
+   int mask = n >> 31;
+   return (n + mask) ^ mask;
+}
