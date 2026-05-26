@@ -59,3 +59,9 @@ int count_set_bits(int n){
     
     return counter;
 }
+
+void swap(int* a, int* b){
+    *a = *a ^ *b;
+    *b = *b ^ *a;
+    *a = *a ^ *b;
+}

@@ -211,7 +211,7 @@ if you can identify the runtime complexity of different algorithms. It's a super
         - [X] modify_bit(n, k, v) - generalizes set/clear by setting the kth bit to a specific value v (0 or 1); use `(n & ~(1 << k)) | (v << k)`
         - [X] is_power_of_two(n) - builds on knowledge of bit patterns to check if exactly one bit is set; use `n & (n - 1) == 0`
         - [X] count_set_bits(n) - counts how many bits are 1 in a number; use Kernighan's method `while n: count++; n &= n - 1`
-        - [ ] swap(a, b) - swaps two values without a temp variable; use `a ^= b; b ^= a; a ^= b`
+        - [X] swap(a, b) - swaps two values without a temp variable; use `a ^= b; b ^= a; a ^= b`
         - [ ] abs_value(n) - computes absolute value without branching using the sign bit; use `mask = n >> 31; (n + mask) ^ mask`
         - [ ] count_different_bits(a, b) - most complex; XOR marks differences then counts resulting 1-bits; use `popcount(a ^ b)`
   
