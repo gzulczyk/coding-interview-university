@@ -205,8 +205,8 @@ if you can identify the runtime complexity of different algorithms. It's a super
         - [X] is_bit_set(n, k) - returns true if the kth bit is 1; foundation for reading any bit; use `(n >> k) & 1`
         - [X] left_shift(n, k) - shifts bits of n left by k positions, equivalent to multiplying by 2ᵏ; use `n << k`
         - [X] right_shift(n, k) - shifts bits of n right by k positions, equivalent to dividing by 2ᵏ; use `n >> k`
-        - [ ] set_bit(n, k) - forces the kth bit to 1 regardless of its current value; use `n | (1 << k)`
-        - [ ] clear_bit(n, k) - forces the kth bit to 0 regardless of its current value; use `n & ~(1 << k)`
+        - [X] set_bit(n, k) - forces the kth bit to 1 regardless of its current value; use `n | (1 << k)`
+        - [X] clear_bit(n, k) - forces the kth bit to 0 regardless of its current value; use `n & ~(1 << k)`
         - [ ] flip_bit(n, k) - toggles the kth bit; if it was 1 it becomes 0 and vice versa; use `n ^ (1 << k)`
         - [ ] modify_bit(n, k, v) - generalizes set/clear by setting the kth bit to a specific value v (0 or 1); use `(n & ~(1 << k)) | (v << k)`
         - [ ] is_power_of_two(n) - builds on knowledge of bit patterns to check if exactly one bit is set; use `n & (n - 1) == 0`

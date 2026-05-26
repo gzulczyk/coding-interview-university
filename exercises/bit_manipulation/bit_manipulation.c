@@ -15,3 +15,13 @@ int left_shift(int n, int k){
 unsigned int right_shift(unsigned int n, int k){
     return (n >> k);
 }
+
+int set_bit(int n, int k){
+    int mask = 1 << k;
+    return n | mask;
+}
+
+int clear_bit(int n, int k){
+    int mask = ~(1 << k);
+    return n & mask; 
+}
