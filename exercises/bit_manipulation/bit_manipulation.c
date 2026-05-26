@@ -48,3 +48,14 @@ bool is_power_of_two(int n){
 
     return (n & (n-1)) == 0; 
 }
+
+int count_set_bits(int n){
+    int counter = 0;
+    
+    while(n != 0) {
+        n = (n & (n-1));
+        counter++;
+    }
+    
+    return counter;
+}
