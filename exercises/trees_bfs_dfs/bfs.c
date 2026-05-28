@@ -55,3 +55,32 @@ void bfs(node* root){
 
    free(queue);
 }
+
+int main(){
+    node *root = malloc(sizeof(node));
+    root->data = 0;
+    root->index = 0;
+    root->next[0] = NULL;
+    root->next[1] = NULL;
+
+    node *node1 = malloc(sizeof(node));
+    node1->data = 2;
+    node1->index = 1;
+    node1->next[0] = NULL;
+    node1->next[1] = NULL;
+
+    node* node2 = malloc(sizeof(node));
+    node2->data = 7;
+    node2->index = 2;
+    node2->next[0] = NULL;
+    node2->next[1] = NULL;
+
+    root->next[0] = node1;
+    root->next[1] = node2;
+
+    bfs(root);
+
+    free(root);
+    free(node1);
+    free(node2);
+}
