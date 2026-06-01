@@ -107,3 +107,15 @@ int get_max(node* root){
         return get_max(root->right);
     }
 }
+
+
+bool is_binary_search_tree(node* root, int min, int max){
+    if(root == NULL){
+        return true;
+    } else {
+        if (root->data <= min || root->data >= max) {
+            return false;
+        }
+        return is_binary_search_tree(root->left, min, root->data) && is_binary_search_tree(root->right, root->data, max);
+    }
+}
