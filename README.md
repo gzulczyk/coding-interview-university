@@ -266,7 +266,7 @@ if you can identify the runtime complexity of different algorithms. It's a super
         - [X] delete_tree
         - [X] is_in_tree // returns true if a given value exists in the tree
         - [X] [get_height // returns the height in nodes (single node's height is 1)](https://www.geeksforgeeks.org/find-the-maximum-depth-or-height-of-a-tree/)
-        - [ ] get_min   // returns the minimum value stored in the tree
+        - [X] get_min   // returns the minimum value stored in the tree
         - [ ] get_max   // returns the maximum value stored in the tree
         - [ ] [is_binary_search_tree](https://leetcode.com/problems/validate-binary-search-tree/)
         - [ ] delete_value

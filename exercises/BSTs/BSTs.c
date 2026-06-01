@@ -85,3 +85,14 @@ int get_height(node* root){
         return ((left_side > right_side) ? left_side : right_side) + 1;
     }
 }
+
+int get_min(node* root){
+    if(root == NULL) {
+        return -1;
+    } else{
+        if(root->left == NULL){
+            return root->data;
+        }
+        return get_min(root->left);
+    }
+}
