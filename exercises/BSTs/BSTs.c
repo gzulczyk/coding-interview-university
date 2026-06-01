@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <stdbool.h>
 
 typedef struct node{
     struct node* left;
@@ -55,3 +56,21 @@ void delete_tree(node * root){
         free(root);
     }
 }
+
+bool is_in_tree(node* root, int value) {
+    if(root == NULL) {
+        return false;
+    } else {
+        if(root->data < value) {
+            return is_in_tree(root->right, value);
+        }
+
+        else if (root->data > value){
+            return is_in_tree(root->left, value);
+        }
+
+        else if(root->data == value) {
+            return true;
+        }
+    }
+} 
