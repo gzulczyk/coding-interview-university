@@ -27,3 +27,11 @@ node* insert(node* root, int data){
     
     return root;
 }
+
+int get_node_count(node* root){
+    if (root == NULL) {
+        return 0;
+    } else {
+        return 1 + get_node_count(root->left) + get_node_count(root->right); // The 1 + is each node counting itself.
+    }
+}
