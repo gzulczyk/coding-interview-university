@@ -108,7 +108,6 @@ int get_max(node* root){
     }
 }
 
-
 bool is_binary_search_tree(node* root, int min, int max){
     if(root == NULL){
         return true;
