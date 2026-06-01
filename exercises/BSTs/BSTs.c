@@ -35,3 +35,13 @@ int get_node_count(node* root){
         return 1 + get_node_count(root->left) + get_node_count(root->right); // The 1 + is each node counting itself.
     }
 }
+
+void print_values(node* root){
+    if (root == NULL) {
+        return;
+    } else {
+        print_values(root->left);
+        printf("%d\n", root->data);  
+        print_values(root->right);      
+    }
+}
