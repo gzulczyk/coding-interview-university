@@ -45,3 +45,13 @@ void print_values(node* root){
         print_values(root->right);      
     }
 }
+
+void delete_tree(node * root){
+    if(root == NULL) {
+        return;
+    } else {
+        delete_tree(root->left);
+        delete_tree(root->right);
+        free(root);
+    }
+}

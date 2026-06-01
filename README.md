@@ -263,7 +263,7 @@ if you can identify the runtime complexity of different algorithms. It's a super
         - [X] [insert    // insert value into tree](https://leetcode.com/problems/insert-into-a-binary-search-tree/submissions/987660183/)
         - [X] get_node_count // get count of values stored
         - [X] print_values // prints the values in the tree, from min to max
-        - [ ] delete_tree
+        - [X] delete_tree
         - [ ] is_in_tree // returns true if a given value exists in the tree
         - [ ] [get_height // returns the height in nodes (single node's height is 1)](https://www.geeksforgeeks.org/find-the-maximum-depth-or-height-of-a-tree/)
         - [ ] get_min   // returns the minimum value stored in the tree
