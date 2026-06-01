@@ -74,3 +74,14 @@ bool is_in_tree(node* root, int value) {
         }
     }
 } 
+
+int get_height(node* root){
+    if(root == NULL) {
+        return -1;
+    } else{
+        int left_side = get_height(root->left);
+        int right_side = get_height(root->right);
+
+        return ((left_side > right_side) ? left_side : right_side) + 1;
+    }
+}
