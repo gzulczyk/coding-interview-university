@@ -268,7 +268,7 @@ if you can identify the runtime complexity of different algorithms. It's a super
         - [X] [get_height // returns the height in nodes (single node's height is 1)](https://www.geeksforgeeks.org/find-the-maximum-depth-or-height-of-a-tree/)
         - [X] get_min   // returns the minimum value stored in the tree
         - [X] get_max   // returns the maximum value stored in the tree
-        - [ ] [is_binary_search_tree](https://leetcode.com/problems/validate-binary-search-tree/)
+        - [X] [is_binary_search_tree](https://leetcode.com/problems/validate-binary-search-tree/)
         - [ ] delete_value
         - [ ] get_successor // returns the next-highest value in the tree after given value, -1 if none
 
