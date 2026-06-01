@@ -96,3 +96,14 @@ int get_min(node* root){
         return get_min(root->left);
     }
 }
+
+int get_max(node* root){
+    if(root == NULL) {
+        return -1;
+    } else {
+        if (root->right == NULL){
+            return root->data;
+        }
+        return get_max(root->right);
+    }
+}
