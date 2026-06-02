@@ -209,5 +209,13 @@ int main(){
     root = NULL;
     assert(get_node_count(root) == 0);
 
+    // is_in_tree test
+    root = insert(root, 5);
+    root = insert(root, 3);
+    root = insert(root, 7);
+    root = insert(root, 1);
+    assert(is_in_tree(root, 1) == true);
+    assert(is_in_tree(root, 23) == false);
+
 
 }
