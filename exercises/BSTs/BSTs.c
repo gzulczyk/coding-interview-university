@@ -118,3 +118,51 @@ bool is_binary_search_tree(node* root, int min, int max){
         return is_binary_search_tree(root->left, min, root->data) && is_binary_search_tree(root->right, root->data, max);
     }
 }
+
+node* delete_node(node* root, int value) {
+    if (root == NULL) {
+        return NULL;
+    } else {
+        
+        // Find value
+
+        if(root->data < value) {
+            root->right = delete_node(root->right, value);
+            return root;
+        }
+
+        else if (root->data > value){
+            root->left = delete_node(root->left, value);
+            return root;
+        }
+
+        else if(root->data == value) {
+
+        // No children
+        if(root->left == NULL && root->right == NULL) {
+            free(root);
+            return NULL;
+        }
+
+        // 1 child 
+        if((root->left != NULL && root->right == NULL)) {
+            node* temp = root->left;
+            free(root);
+            return temp;
+        }
+
+        if(root->left == NULL && root->right != NULL) {
+            node* temp = root->right;
+            free(root);
+            return temp;
+        }
+
+        // 2 children
+        root->data = get_min(root->right);
+        root->right = delete_node(root->right, root->data);
+        return root;
+
+        }
+
+    }
+}
