@@ -203,4 +203,11 @@ int main(){
 
     // get_node_count test
     assert(get_node_count(root) == 4);
+
+    // delete_tree test 
+    delete_tree(root);
+    root = NULL;
+    assert(get_node_count(root) == 0);
+
+
 }
