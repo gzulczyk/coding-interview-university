@@ -163,6 +163,26 @@ node* delete_node(node* root, int value) {
         return root;
 
         }
+    }
 
+    return root;
+}
+
+int get_successor(node* root, int value, int successor){
+    if (root == NULL) {
+        return -1;
+    } else {
+        if (value < root->data) {
+            successor = root->data;
+            return get_successor(root->left, value, successor);
+        } else if (value > root->data) {
+             return get_successor(root->right, value, successor);   
+        } else if (value == root->data) {
+            if(root->right == NULL) {
+                return successor;
+            } else if (root->right != NULL) {
+                return get_min(root->right);
+            }
+        }
     }
 }
