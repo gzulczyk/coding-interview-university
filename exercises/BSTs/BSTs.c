@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <stdbool.h>
+#include <stdio.h>
 
 typedef struct node{
     struct node* left;
@@ -73,6 +74,7 @@ bool is_in_tree(node* root, int value) {
             return true;
         }
     }
+    return false;
 } 
 
 int get_height(node* root){
@@ -185,4 +187,15 @@ int get_successor(node* root, int value, int successor){
             }
         }
     }
+    return successor;
+}
+
+int main(){
+    // Insert test
+    node* root = NULL;
+    root = insert(root, 5);
+    root = insert(root, 3);
+    root = insert(root, 7);
+    root = insert(root, 1);
+    print_values(root);
 }
