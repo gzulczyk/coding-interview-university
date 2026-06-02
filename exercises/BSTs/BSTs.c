@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include <stdbool.h>
 #include <stdio.h>
+#include <assert.h> 
 
 typedef struct node{
     struct node* left;
@@ -191,6 +192,7 @@ int get_successor(node* root, int value, int successor){
 }
 
 int main(){
+    
     // Insert test
     node* root = NULL;
     root = insert(root, 5);
@@ -198,4 +200,7 @@ int main(){
     root = insert(root, 7);
     root = insert(root, 1);
     print_values(root);
+
+    // get_node_count test
+    assert(get_node_count(root) == 4);
 }
