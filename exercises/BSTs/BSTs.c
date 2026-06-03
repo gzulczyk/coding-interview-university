@@ -231,4 +231,31 @@ int main(){
     assert(is_binary_search_tree(root, 0, 5) == false);
     assert(is_binary_search_tree(root, 0, 8) == true);
     assert(is_binary_search_tree(root, -1, 25) == true);
+
+    // delete_node test
+
+    // Delete node with no children
+    root = delete_node(root, 1);
+    printf("--------- I (deleted leaf - 1)\n");
+    print_values(root);
+
+    // Delete node with one child
+    root = delete_node(root, 3);
+    printf("--------- II (deleted node with one child - 3)\n");
+    print_values(root);
+
+    // Delete node with two children
+    root = delete_node(root, 5);
+    printf("--------- III (deleted node with two children - 5)\n");
+    print_values(root);
+
+    // Delete node that doesn't exist
+    root = delete_node(root, 99);
+    printf("--------- IV (deleted non-existent - 99)\n");
+    print_values(root);
+
+    // Delete root
+    root = delete_node(root, 7);
+    printf("--------- V (deleted root - 7)\n");
+    print_values(root);
 }
