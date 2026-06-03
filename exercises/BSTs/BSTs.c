@@ -225,4 +225,10 @@ int main(){
     
     // get_max test
     assert(get_max(root) == 7);
+
+    // is_binary_search_tree test
+    assert(is_binary_search_tree(root, 9, 15) == false);
+    assert(is_binary_search_tree(root, 0, 5) == false);
+    assert(is_binary_search_tree(root, 0, 8) == true);
+    assert(is_binary_search_tree(root, -1, 25) == true);
 }
