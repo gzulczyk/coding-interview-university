@@ -290,7 +290,7 @@ if you can identify the runtime complexity of different algorithms. It's a super
     - [X] [[Review] Heap (playlist) in 13 minutes (video)](https://www.youtube.com/playlist?list=PL9xmBV_5YoZNsyqgPW-DNwUeT8F8uhWc6)
     - [ ] Implement a max-heap:
         - [X] insert
-        - [ ] sift_up - needed for insert
+        - [X] sift_up - needed for insert
         - [ ] get_max - returns the max item, without removing it
         - [ ] get_size() - return number of elements stored
         - [ ] is_empty() - returns true if the heap contains no elements

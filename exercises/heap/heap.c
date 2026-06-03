@@ -7,13 +7,8 @@ typedef struct heap {
     int data[MAX_SIZE];
 } heap;
 
-heap* insert(heap* h, int value){
-    h->data[h->size] = value;
-    h->size++;
-
-    int i = h->size-1;  // Index of newly inserted value 
+heap* sift_up(heap* h, int i){
     int parent = (i - 1) / 2; // Index of its parent
-    
     while(i > 0) { // Until you reach 1st position on array
         if (h->data[i] > h->data[parent]) {
 
@@ -32,3 +27,11 @@ heap* insert(heap* h, int value){
     return h;
 }
 
+heap* insert(heap* h, int value){
+    h->data[h->size] = value;
+    h->size++;
+
+    int i = h->size-1;  // Index of newly inserted value 
+    return sift_up(h, i);
+    
+}
