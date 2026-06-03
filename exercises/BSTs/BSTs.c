@@ -217,5 +217,6 @@ int main(){
     assert(is_in_tree(root, 1) == true);
     assert(is_in_tree(root, 23) == false);
 
-
+    // get_height
+    assert(get_height(root) == 2);
 }
