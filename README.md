@@ -289,7 +289,7 @@ if you can identify the runtime complexity of different algorithms. It's a super
     - [ ] [Linear Time BuildHeap (max-heap)](https://www.youtube.com/watch?v=MiyLo8adrWw)
     - [X] [[Review] Heap (playlist) in 13 minutes (video)](https://www.youtube.com/playlist?list=PL9xmBV_5YoZNsyqgPW-DNwUeT8F8uhWc6)
     - [ ] Implement a max-heap:
-        - [ ] insert
+        - [X] insert
         - [ ] sift_up - needed for insert
         - [ ] get_max - returns the max item, without removing it
         - [ ] get_size() - return number of elements stored
