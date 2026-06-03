@@ -258,4 +258,15 @@ int main(){
     root = delete_node(root, 7);
     printf("--------- V (deleted root - 7)\n");
     print_values(root);
+
+    // get_successor test
+    root = insert(root, 5);
+    root = insert(root, 3);
+    root = insert(root, 7);
+    root = insert(root, 1);
+
+    assert(get_successor(root, 1, -1) == 3);
+    assert(get_successor(root, 5, -1) == 7);
+    assert(get_successor(root, 3, -1) == 5);
+    assert(get_successor(root, 7, -1) == -1);
 }
