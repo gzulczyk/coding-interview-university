@@ -109,3 +109,16 @@ void remove(heap* h, int i){
     sift_down(h,i);
 
 }
+
+heap* heapify(heap* h){
+    if(h == NULL || h->size == 0) {
+        return NULL;
+    } else {
+        int last_non_leaf = (h->size - 1) / 2;
+        while(last_non_leaf >= 0) {
+            sift_down(h, last_non_leaf); 
+            last_non_leaf--;
+        }
+    }
+    return h;
+}
