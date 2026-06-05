@@ -42,3 +42,11 @@ int get_max(heap* h) {
     }
     return -1;   
 }
+
+int get_size(heap *h){
+    if (h == NULL) {
+        return -1;
+    } else {
+        return h->size;
+    }
+}
