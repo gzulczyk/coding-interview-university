@@ -35,3 +35,10 @@ heap* insert(heap* h, int value){
     return sift_up(h, i);
     
 }
+
+int get_max(heap* h) {
+    if (h != NULL && h->size > 0) {
+        return h->data[0];
+    }
+    return -1;   
+}
