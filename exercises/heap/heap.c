@@ -122,3 +122,16 @@ heap* heapify(heap* h){
     }
     return h;
 }
+
+heap* heap_sort(heap* h) {
+    if(h == NULL || h->size == 0) {
+        return NULL;
+    } else {
+        h = heapify(h);
+        while(0 < h->size){
+            extract_max(h);
+        }
+    }
+
+    return h;
+}

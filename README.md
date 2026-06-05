@@ -298,7 +298,7 @@ if you can identify the runtime complexity of different algorithms. It's a super
         - [X] sift_down - needed for extract_max
         - [X] remove(x) - removes item at index x
         - [X] heapify - create a heap from an array of elements, needed for heap_sort
-        - [ ] heap_sort() - take an unsorted array and turn it into a sorted array in place using a max heap or min heap
+        - [X] heap_sort() - take an unsorted array and turn it into a sorted array in place using a max heap or min heap
 
 **[⬆ back to top](#table-of-contents)**
 
