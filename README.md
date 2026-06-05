@@ -293,7 +293,7 @@ if you can identify the runtime complexity of different algorithms. It's a super
         - [X] sift_up - needed for insert
         - [X] get_max - returns the max item, without removing it
         - [X] get_size() - return number of elements stored
-        - [ ] is_empty() - returns true if the heap contains no elements
+        - [X] is_empty() - returns true if the heap contains no elements
         - [ ] extract_max - returns the max item, removing it
         - [ ] sift_down - needed for extract_max
         - [ ] remove(x) - removes item at index x

@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdbool.h> 
 
 #define MAX_SIZE 20
 
@@ -48,5 +49,13 @@ int get_size(heap *h){
         return -1;
     } else {
         return h->size;
+    }
+}
+
+int is_empty(heap* h){
+    if(h == NULL || h->size == 0) {
+        return true;
+    } else {
+        return false;
     }
 }
