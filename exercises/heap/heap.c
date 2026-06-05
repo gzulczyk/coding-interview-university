@@ -59,3 +59,39 @@ int is_empty(heap* h){
         return false;
     }
 }
+
+heap* sift_down(heap* h, int i){  
+    while(1) {
+        int left = 2 * i + 1;
+        int right = 2 * i + 2;
+        int largest = i; 
+        
+        // Define which one is larger
+        if (left < h->size && h->data[i] < h->data[left]) {
+            largest = left;
+        } else if(right < h->size && h->data[largest] < h->data[right]) {
+            largest = right;
+        }
+        if (largest == i) break;
+
+        int temp = h->data[i];
+        h->data[i] = h->data[largest];
+        h->data[largest] = temp;
+        i = largest;
+    }
+    return h;
+}
+
+int extract_max(heap* h){
+    if(h == NULL || h->size == 0) {
+        return -1;
+    } else {
+        int max = get_max(h);
+        h->data[0] = h->data[h->size - 1];
+        h->size--;
+
+        sift_down(h, 0);
+
+        return max;
+    }
+}
