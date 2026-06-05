@@ -95,3 +95,17 @@ int extract_max(heap* h){
         return max;
     }
 }
+
+
+void remove(heap* h, int i){
+    if (h == NULL || h->size == 0 || h->size <= i) {
+        exit(-1);
+    }
+    
+    h->data[i] = h->data[h->size-1];
+    h->size--;
+
+    sift_up(h, i);
+    sift_down(h,i);
+
+}

@@ -296,7 +296,7 @@ if you can identify the runtime complexity of different algorithms. It's a super
         - [X] is_empty() - returns true if the heap contains no elements
         - [X] extract_max - returns the max item, removing it
         - [X] sift_down - needed for extract_max
-        - [ ] remove(x) - removes item at index x
+        - [X] remove(x) - removes item at index x
         - [ ] heapify - create a heap from an array of elements, needed for heap_sort
         - [ ] heap_sort() - take an unsorted array and turn it into a sorted array in place using a max heap or min heap
 
