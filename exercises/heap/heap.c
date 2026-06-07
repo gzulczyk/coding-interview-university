@@ -165,6 +165,10 @@ int main(){
     assert(is_empty(h) == false);
     remove_heap(h, 0);
     assert(is_empty(h) == true);
-     
+
+    // extract_max test
+    h = insert(h,20);
+    assert(extract_max(h) == 20);
+    assert(is_empty(h) == true);
 
 }
