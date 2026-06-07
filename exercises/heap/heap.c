@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdbool.h> 
+#include <stdlib.h>
 
 #define MAX_SIZE 20
 
@@ -29,6 +30,19 @@ heap* sift_up(heap* h, int i){
 }
 
 heap* insert(heap* h, int value){
+    if(h == NULL) {
+        h = malloc(sizeof(heap));
+        if (h == NULL) {
+            return NULL;
+        }
+        h->size = 0;
+    }
+    
+    if(h->size >= MAX_SIZE) {
+        printf("Heap is full!\n");
+        return h;
+    }
+
     h->data[h->size] = value;
     h->size++;
 
@@ -134,4 +148,8 @@ heap* heap_sort(heap* h) {
     }
 
     return h;
+}
+
+int main(){
+    insert()
 }
