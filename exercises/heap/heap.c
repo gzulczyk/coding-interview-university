@@ -171,4 +171,19 @@ int main(){
     assert(extract_max(h) == 20);
     assert(is_empty(h) == true);
 
+    // heapify test
+    h = malloc(sizeof(heap));
+    if (h != NULL){
+        h->size = 5;
+        h->data[0] = 1; 
+        h->data[1] = 3;
+        h->data[2] = 7;
+        h->data[3] = 5;
+        h->data[4] = 21;
+        h = heapify(h);
+
+        assert(get_max(h) == 21);
+        assert(get_size(h) == 5);
+    }
+    
 }
