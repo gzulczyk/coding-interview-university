@@ -180,6 +180,7 @@ int main(){
     assert(is_empty(h) == true);
 
     // heapify test
+    free(h);
     h = malloc(sizeof(heap));
     if (h != NULL){
         h->size = 5;
@@ -192,6 +193,28 @@ int main(){
 
         assert(get_max(h) == 21);
         assert(get_size(h) == 5);
+        assert(h->data[0] == 21);
     }
-    
+
+    // heap_sort test
+    free(h);    
+    h = malloc(sizeof(heap));
+    if (h != NULL){
+        h->size = 5;
+        h->data[0] = 1; 
+        h->data[1] = 3;
+        h->data[2] = 7;
+        h->data[3] = 5;
+        h->data[4] = 21;
+        h = heap_sort(h);
+
+        assert(get_size(h) == 5);
+        assert(h->data[0] == 1);
+        assert(h->data[4] == 21);
+    for (int i=0; i < h->size-1; i++){
+        assert(h->data[i] < h->data[i+1]);
+    }
+
+    }
+    free(h);
 }
