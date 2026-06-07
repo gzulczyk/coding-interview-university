@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdbool.h> 
 #include <stdlib.h>
+#include <assert.h>
 
 #define MAX_SIZE 20
 
@@ -111,7 +112,7 @@ int extract_max(heap* h){
 }
 
 
-void remove(heap* h, int i){
+void remove_heap(heap* h, int i){
     if (h == NULL || h->size == 0 || h->size <= i) {
         exit(-1);
     }
@@ -151,5 +152,13 @@ heap* heap_sort(heap* h) {
 }
 
 int main(){
-    insert()
+   
+    // Test insert 
+    heap* h = NULL;
+    h = insert(h, 2);
+    assert(h != NULL);
+    assert(get_size(h) == 1);
+    assert(h->data[0] == 2);
+    assert(get_max(h) == 2);
+
 }
