@@ -143,11 +143,19 @@ heap* heap_sort(heap* h) {
         return NULL;
     } else {
         h = heapify(h);
-        while(0 < h->size){
-            extract_max(h);
+        int og_size = h->size;
+        int sorted[MAX_SIZE];
+        for (int i = og_size-1; i >= 0; i--) {
+            sorted[i] = extract_max(h);
         }
-    }
 
+        for(int i=0; i <= og_size-1; i++) {
+            h->data[i] = sorted[i];
+        }
+        
+        h->size = og_size;
+    }
+   
     return h;
 }
 
