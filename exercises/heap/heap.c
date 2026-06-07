@@ -161,4 +161,10 @@ int main(){
     assert(h->data[0] == 2);
     assert(get_max(h) == 2);
 
+    // is_empty test
+    assert(is_empty(h) == false);
+    remove_heap(h, 0);
+    assert(is_empty(h) == true);
+     
+
 }
