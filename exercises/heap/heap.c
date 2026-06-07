@@ -84,7 +84,7 @@ heap* sift_down(heap* h, int i){
         // Define which one is larger
         if (left < h->size && h->data[i] < h->data[left]) {
             largest = left;
-        } else if(right < h->size && h->data[largest] < h->data[right]) {
+        } if(right < h->size && h->data[largest] < h->data[right]) {
             largest = right;
         }
         if (largest == i) break;
